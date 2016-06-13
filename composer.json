@@ -1,7 +1,7 @@
 {
     "name": "benrowe/laravel-widgets",
     "type": "library",
-    "description": "A basic laravel widget system based on arrilot/laravel-widgets",
+    "description": "An extended widget system based on arrilot/laravel-widgets",
     "keywords": ["laravel", "widgets", "view", "blade"],
     "license": "MIT",
     "homepage" : "http://benrowe.info",
@@ -16,14 +16,9 @@
     },
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "5.*",
-        "illuminate/contracts": "5.*",
-        "illuminate/view": "5.*",
-        "illuminate/container": "5.*",
-        "illuminate/console": "5.*"
+        "arrilot/laravel-widgets": "^3.4"
     },
     "require-dev": {
-        "php" : ">=5.5.9",
         "phpunit/phpunit": "^4.0"
     },
     "autoload": {
