@@ -12,8 +12,9 @@ trait BeginEndFactory
     private $stack = [];
 
     /**
-     * [begin description]
-     * @return [type] [description]
+     * Being the widget
+     *
+     * @return Expression
      */
     public function begin()
     {
@@ -25,10 +26,12 @@ trait BeginEndFactory
     }
 
     /**
-     * [end description]
-     * @return [type] [description]
+     * End the widget
+     *
+     * @param array $config suplementry config
+     * @return Expression
      */
-    public function end()
+    public function end($config = [])
     {
         $args = array_pop($this->stack);
         $args[1] = $args[1] ? array_merge($args[1], $config) : [];
