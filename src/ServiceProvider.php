@@ -2,9 +2,10 @@
 
 namespace Benrowe\Laravel\Widgets;
 
+use Arrilot\Widgets\Misc\LaravelApplicationWrapper;
 use Arrilot\Widgets\ServiceProvider as BaseServiceProvider;
 use Benrowe\Laravel\Widgets\Factories\WidgetFactory;
-use Arrilot\Widgets\Misc\LaravelApplicationWrapper;
+
 
 /**
  * @package Benrowe\Laravel\Widgets
