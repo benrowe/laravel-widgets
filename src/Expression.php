@@ -2,8 +2,9 @@
 
 namespace Benrowe\Laravel\Widgets;
 
-use Arrilot\Widgets\AbstractWidget;
+use Arrilot\Widgets\AbstractWidget as BaseAbstractWidget;
 use Illuminate\Support\HtmlString;
+use InvalidArgumentException;
 
 /**
  * Represents the widget after it has been executed.
