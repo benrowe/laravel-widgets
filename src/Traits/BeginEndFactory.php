@@ -17,7 +17,11 @@ trait BeginEndFactory
      */
     public function begin()
     {
+        $args = func_get_args();
+        $this->stack[] = $args;
+        $this->instantiateWidget($args);
 
+        return $this->asExpression($this->widget->begin());
     }
 
     /**
@@ -26,6 +30,10 @@ trait BeginEndFactory
      */
     public function end()
     {
+        $args = array_pop($this->stack);
+        $args[1] = $args[1] ? array_merge($args[1], $config) : [];
+        $this->instantiateWidget($args);
 
+        return $this->asExpression($this->widget->end());
     }
 }
