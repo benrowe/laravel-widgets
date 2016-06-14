@@ -65,7 +65,7 @@ abstract class AbstractWidget extends BaseAbstractWidget
             $this->$key = $value;
             return;
         }
-
+        $this->config[$key] = $value;
     }
 
     /**
