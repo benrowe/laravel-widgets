@@ -11,11 +11,19 @@ trait BeginEndFactory
 {
     private $stack = [];
 
+    /**
+     * [begin description]
+     * @return [type] [description]
+     */
     public function begin()
     {
 
     }
 
+    /**
+     * [end description]
+     * @return [type] [description]
+     */
     public function end()
     {
 
