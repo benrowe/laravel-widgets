@@ -25,7 +25,7 @@ trait Cache
      * [cacheEnabled description]
      * @return [type] [description]
      */
-    public function cacheEnabled(dfs)
+    public function cacheEnabled()
     {
         return true;
     }
