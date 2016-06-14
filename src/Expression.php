@@ -17,17 +17,38 @@ class Expression extends HtmlString
 {
     protected $widget;
 
-    public function __construct($html, AbstractWidget $widget)
+    /**
+     * Constructor
+     * Recieve necessary dependancies
+     *
+     * @param string             $html
+     * @param BaseAbstractWidget $widget
+     */
+    public function __construct($html, BaseAbstractWidget $widget)
     {
         $this->widget = $widget;
         parent::__construct($html);
     }
 
+    /**
+     * Retrieve the instance of the widget this Expression Represents
+     *
+     * @return BaseAbstractWidget
+     */
     public function getWidget()
     {
         return $this->widget;
     }
 
+    /**
+     * Magic method implementation
+     * Expose the methods of the widget through this expression
+     *
+     * @param  string $method the method name to try and call
+     * @param  array $params params the method requires
+     * @throws InvalidArgumentException
+     * @return mixed
+     */
     public function __call($method, array $params = [])
     {
         if (is_callable($this->widget, $method)) {

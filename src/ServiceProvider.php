@@ -15,7 +15,7 @@ class ServiceProvider extends BaseServiceProvider
     /**
      * Suplement the base provider with a different version of the widget factory
      *
-     * @return nil
+     * @return nil|null
      */
     public function register()
     {
@@ -32,7 +32,7 @@ class ServiceProvider extends BaseServiceProvider
     /**
      * Register two additional blade directives
      *
-     * @return nil
+     * @return nil|null
      */
     public function boot()
     {

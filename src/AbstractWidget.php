@@ -57,7 +57,7 @@ abstract class AbstractWidget extends BaseAbstractWidget
      *
      * @param string $key
      * @param mixed $value
-     * @return nil
+     * @return nil|null
      */
     public function addCfg($key, $value)
     {
