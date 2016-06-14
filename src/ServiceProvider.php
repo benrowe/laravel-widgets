@@ -19,7 +19,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        parent::boot();
+        parent::register();
 
         $this->app->bind('arrilot.widget', function () {
             return new WidgetFactory(new LaravelApplicationWrapper());
