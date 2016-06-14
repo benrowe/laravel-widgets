@@ -22,8 +22,9 @@ trait Cache
     }
 
     /**
-     * [cacheEnabled description]
-     * @return [type] [description]
+     *
+     *
+     * @return boolean
      */
     public function cacheEnabled()
     {
