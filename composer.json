@@ -22,9 +22,6 @@
     "require-dev": {
         "phpunit/phpunit": "^4.0"
     },
-    "replace": {
-        "arrilot/laravel-widgets":"3.4.*"
-    },
     "autoload": {
         "psr-4": {
             "Benrowe\\Laravel\\Widgets\\": "src/"
