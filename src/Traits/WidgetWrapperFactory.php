@@ -7,9 +7,23 @@ namespace Benrowe\Laravel\Widgets\Traits;
  *
  * @package Benrowe\Laravel\Widgets
  */
-trait BeginEndFactory
+trait WidgetWrapperFactory
 {
     private $stack = [];
+
+    /**
+     *
+     * @param  [type] $args [description]
+     * @return [type]       [description]
+     */
+    abstract protected function instantiateWidget($args);
+
+    /**
+     * [asExpression description]
+     * @param  [type] $html [description]
+     * @return [type]       [description]
+     */
+    abstract protected function asExpression($html);
 
     /**
      * Being the widget
