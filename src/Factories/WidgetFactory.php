@@ -3,8 +3,9 @@
 namespace Benrowe\Laravel\Widgets\Factories;
 
 use Arrilot\Widgets\Factories\WidgetFactory as BaseWidgetFactory;
+use Arrilot\Widgets\AbstractWidget;
 use Benrowe\Laravel\Widgets\Expression;
-use Benrowe\Laravel\Widgets\Traits\BeginEndFactory;
+use Benrowe\Laravel\Widgets\Traits\WidgetWrapperFactory;
 
 /**
  * Widget Factory
@@ -13,7 +14,20 @@ use Benrowe\Laravel\Widgets\Traits\BeginEndFactory;
  */
 class WidgetFactory extends BaseWidgetFactory
 {
-    use BeginEndFactory;
+    use WidgetWrapperFactory;
+
+    /**
+     * Instanciate the widget, based on the provided configuration
+     * and return the instance of the widget
+     *
+     * @param  array $params widget parameters
+     * @return AbstractWidget
+     */
+    public function initWidget(array $params = [])
+    {
+        $this->instantiateWidget($params);
+        return $this->widget;
+    }
 
     /**
      * Convert the outputted html to an expression.
